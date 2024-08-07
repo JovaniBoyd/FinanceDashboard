@@ -19,12 +19,12 @@ Python 3.12.4
 
 Usage
 -------
-This only works with transaction data in a SQL database formatted like the example.db file. 
-This can be obtained through the Plaid API.
-Add paths to databases and .csv files.
-Add or remove tickers to list.
-Run command:
-  streamlit run streamlit_dash.py
+- This only works with transaction data in a SQL database formatted like the example.db file. 
+- This can be obtained through the Plaid API.
+- Add paths to databases and .csv files.
+- Add or remove tickers to list.
+- Run command:
+   streamlit run streamlit_dash.py
 
 
 
