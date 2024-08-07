@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plost
-import numpy as np
 import yfinance as yf
 from datetime import datetime
 import sqlite3
@@ -212,7 +211,7 @@ createTotalsDB()
 createTopFiveDB()
 createRecurring()
 
-#===========WEBAPP===========
+#=====================WEBAPP=====================
 
 st.set_page_config(layout='wide', page_title="financial dash")
 
@@ -247,7 +246,6 @@ st.markdown("""
 
 conn = st.connection('finance_db', type='sql')
 
-spends = pd.read_csv('chartPH.csv')
 c1, c2, c3 = st.columns([2, 1, 1])
 with c1:
     st.markdown(f'### {current_month}'.upper())
@@ -303,8 +301,7 @@ normalized_data = stock_data['Adj Close'] / stock_data['Adj Close'].iloc[0] * 10
 
 with d1:
     st.markdown('### NETWORTH')
-    #ADD .csv file of balances (excel)
-    netw = pd.read_csv('')
+    netw = pd.read_csv('')#Add .csv file of balances (excel)
     st.dataframe(netw,
                     column_config={
                         "Amount": st.column_config.NumberColumn(format="$%d")
